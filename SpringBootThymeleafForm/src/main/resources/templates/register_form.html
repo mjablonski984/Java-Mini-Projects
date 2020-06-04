@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>User Registration</title>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <!-- th:action specifies action of a form, th:object specifies model object, -->
+            <!-- th:field attribute points to the field name of the object in the mode -->
+            <form action="#" th:action="@{/register}" method="post" th:object="${user}" class="form">
+                <fieldset>
+                    <legend>User Registration</legend>
+                    <div>
+                        <label>Full name:</label>
+                        <input type="text" th:field="*{name}" />
+                        <span class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Full name error</span>
+                </div>
+                <br />
+                <div>
+                    <label>E-mail:</label>
+                    <input type="text" th:field="*{email}" />
+                    <span class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Full email error</span>
+                </div>
+                <br />
+                <div>
+                <label>Password:</label>
+                <input type="password" th:field="*{password}" />
+                <span class="error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Full password error</span>
+                </div>
+                <br />
+                <div>
+                    <label>Birthday (yyyy-mm-dd):</label>
+                    <input type="text" th:field="*{birthday}" />
+                    <span class="error" th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}">Full birthday error</span>
+                </div>
+                <br />
+                <div>
+                    <label>Gender:</label>
+                    <input type="radio" th:field="*{gender}" value="Male" />Male
+                    <input type="radio" th:field="*{gender}" value="Female" />Female
+                <span class="error" th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}">Full gender error</span>
+                </div>
+                <br />
+                <div>
+                <label>Profession:</label>
+                    <select th:field="*{profession}">
+                    <option th:each="p : ${listProfession}" th:value="${p}" th:text="${p}" />
+                    </select>
+                    <span class="error" th:if="${#fields.hasErrors('profession')}" th:errors="*{profession}">Full profession error</span>
+                </div>
+                <br />
+                <div>
+                    <label>Annual Income (20k-200k):</label>
+                    <input type="number" th:field="*{income}" min=0 />
+                    <span class="error" th:if="${#fields.hasErrors('income')}" th:errors="*{income}">Full income error</span>
+                </div>
+                <br />
+                <div>
+                    <label>Accept terms?</label>
+                    <input type="checkbox" th:field="*{accept}" />
+                    <span class="error" th:if="${#fields.hasErrors('accept')}" th:errors="*{accept}">Full accept error</span>
+                </div>
+                <br />
+                <div>
+                    <label>Note:</label>
+                    <textarea rows="5" cols="25" th:field="*{note}"></textarea>
+                    <span class="error" th:if="${#fields.hasErrors('note')}" th:errors="*{note}">Full note error</span>           
+                </div>
+                <br />
+                
+                <input type="submit" value="Register">
+
+                </fieldset>
+            </form>
+        </div>
+
+    </body>
+
+</html>

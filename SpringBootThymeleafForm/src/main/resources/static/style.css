@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+    font-family: Verdana, Tahoma, sans-serif
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%
+}
+
+.container{
+    width: 100%;
+    max-width: fit-content;
+    margin:  2rem auto;  
+}
+
+h1 {
+    text-align: center;
+	margin: 2rem  0;
+	color: #1abc9c;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+	display: block;
+	color: #1abc9c;
+	outline: none;
+}
+
+a:focus, a:hover {
+	font-weight: bolder;
+}
+
+.error {
+    color: red;
+    font-style: italic;
+}
+
+.registered {
+	background-color: #e8eeef;
+	padding: 1.5rem;
+	border-radius: 8px;
+}
+
+.info {
+    display: inline-block;
+    width: 220px;
+    text-align: left;
+    margin-bottom: .75rem;
+}
+
+.form {
+	max-width: 600px;
+	margin: 1rem auto;
+	padding: 1.25rem;
+	background: #f4f7f8;
+	border-radius: 8px;
+}
+
+.form fieldset{
+	border: none;
+}
+
+.form legend {
+	font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form label {
+    display: inline-block;
+    min-width: 200px;
+    width: fit-content;
+    margin: 0.5rem 0;
+    text-align: left;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="number"],
+.form textarea,
+.form select {
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 1rem;
+	margin: 0;
+	outline: 0;
+	padding: 0.75rem;
+	width: 100%;
+	background-color: #e8eeef;
+	color:#8a97a0;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+}
+
+.form input[type="text"]:focus,
+.form input[type="password"]:focus,
+.form input[type="number"]:focus,
+.form textarea:focus,
+.form select:focus {
+	background: #d2d9dd;
+}
+
+.form input[type=radio] {
+    margin: 0 5px 0 25px;
+}
+
+.form input[type=checkbox] {
+    margin-right: 80px;
+}
+
+.form textarea {
+    resize: vertical;
+}
+
+.form select {
+	-webkit-appearance: menulist-button;
+}
+
+.form input[type="submit"] {
+	position: relative;
+	display: block;
+	padding: 1rem 2rem;
+	color: #fff;
+	margin: 0 auto;
+	background: #1abc9c;
+	font-size: 1rem;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border: 1px solid #16a085;
+	border-width: 1px 1px 3px;
+	margin-bottom: .75rem;
+	cursor: pointer;
+
+}
+
+.form input[type="submit"]:hover {
+	background: #109177;
+}
+
